@@ -1,0 +1,50 @@
+/* some preliminary CSS*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #388087;
+}
+
+fieldset {
+    border: none;
+    margin: 20px 0;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+
+input[type=submit] {
+    background-color: #388087;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+/* A new thing that I learned today ↑↑*/
+
+#smoothieResult {
+    margin-top: 20px;
+}
+
+#smoothieDescription {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+}

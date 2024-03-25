@@ -8,6 +8,42 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <main>
+        <h1>Smoothie Machine</h1>
+        <form id="smoothieForm">
+            <fieldset>
+                <legend>Build Your Smoothie</legend>
+
+                <label for="base">Choose your base:</label>
+                <select id="base" name="base">
+                    <option value="milk">Milk</option>
+                    <option value="yogurt">Yogurt</option>
+                    <option value="juice">Juice</option>
+                    <option value="water">Water</option>
+                </select>
+
+                <div class="ingredients">
+                    <p>Select your ingredients:</p>
+                    <div>
+                        <input type="checkbox" id="banana" name="ingredient" value="banana">
+                        <label for="banana">Banana</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="strawberries" name="ingredient" value="strawberries">
+                        <label for="strawberries">Strawberries</label>
+                        &nbsp;
+                    </div>
+                    <!-- I will add more ingredients later -->
+                </div>
+
+                <input type="submit" value="Order Smoothie">
+            </fieldset>
+        </form>
+
+        <section id="smoothieResult">
+            <h2>Your Smoothie</h2>
+            <p id="smoothieDescription">Please place an order...</p>
+        </section>
+    </main>
 </body>
 </html>
