@@ -26,3 +26,44 @@ document.getElementById('smoothieForm').addEventListener('submit', function(even
     // Display the description
     document.getElementById('smoothieDescription').textContent = smoothieDescription;
 });
+
+
+// Ingredient & base preview function
+//base
+document.getElementById('smoothieForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const base = document.getElementById('base').value;
+    let ingredients = Array.from(document.querySelectorAll('input[name="ingredient"]:checked')).map(checkbox => checkbox.value);// pretty complex huh
+
+    // Display the smoothie description with selected ingredients
+    updateSmoothieDescription(base, ingredients);
+});
+
+// Listen for changes in ingredient selection
+document.querySelectorAll('input[name="ingredient"]').forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        const base = document.getElementById('base').value;
+        let ingredients = Array.from(document.querySelectorAll('input[name="ingredient"]:checked')).map(checkbox => checkbox.value);
+        updateSmoothieDescription(base, ingredients);
+    });
+});
+
+
+// Smoothie name generator
+function generateSmoothieName(ingredients) {
+    const adjectives = ['Refreshing', 'Exotic', 'Green', 'Berrylicious', 'Tropical'];
+    const randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)];
+    const randomIngredient = ingredients[Math.floor(Math.random() * ingredients.length)];
+    return `${randomAdj} ${randomIngredient} Smoothie`;
+}
+
+// Update the updateSmoothieDescription function to include the name
+function updateSmoothieDescription(base, ingredients) {
+    const descriptionArea = document.getElementById('smoothieDescription');
+    if (ingredients.length === 0) {
+        descriptionArea.textContent = 'Please select at least one ingredient.';
+    } else {
+        const name = generateSmoothieName(ingredients);
+        descriptionArea.innerHTML = `<strong>${name}</strong> with a ${base} base includes: ${ingredients.join(', ')}.`;
+    }
+}
