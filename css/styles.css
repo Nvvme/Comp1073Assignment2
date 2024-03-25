@@ -1,50 +1,72 @@
 /* some preliminary CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f0f4f8;
+    background-image: url('../img/two-healthy-delicious-smoothies.jpg'); /* image taken from freepik.com */
+    background-size: cover;
+    background-position: center;
 }
 
 main {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
+    background-color: rgba(224, 179, 32, 0.4);
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; 
 }
 
-h1 {
-    color: #388087;
+h1, h2 {
+    font-family: 'Montserrat', cursive;
+    color: white; /* Base color for contrast */
+    font-size: 2.5em;
+    text-align: center;
+    background: -webkit-linear-gradient(left, #6dd5ed, #e20c0c); /* A nice Bluish gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 2px #fb0e0e) drop-shadow(-2px -2px 2px #2193b0);
+    margin-bottom: 20px;
 }
 
-fieldset {
-    border: none;
-    margin: 20px 0;
+legend {
+    color: #3a7d44;
+    font-weight: 900;
 }
 
-label {
-    margin-top: 10px;
-    display: block;
+label, .ingredients p {
+    color: #2a2a2a; 
+    font-weight: 900;
+    font-size:x-large;
 }
-
 
 input[type=submit] {
-    background-color: #388087;
+    background-color: #3a7d44;
     color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-/* A new thing that I learned today ↑↑*/
-
-#smoothieResult {
-    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 8px; /* Rounded corners for buttons */
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* margin so that it doesn't look too busy */
 }
 
-#smoothieDescription {
-    background-color: #e0e0e0;
-    padding: 10px;
+input[type=submit]:hover {
+    background-color: #2f5d34; /* A darker green on hover for a nice effect */
+}
+
+/* A nice effect for my ingredients */
+.ingredients div {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 5px;
     border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.ingredients div:hover {
+    background-color: #f0e14a;
+    transform: scale(1.05);
 }
