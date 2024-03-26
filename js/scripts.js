@@ -37,6 +37,15 @@ document.getElementById('smoothieForm').addEventListener('submit', function(even
 
     // Display the smoothie description with selected ingredients
     updateSmoothieDescription(base, ingredients);
+
+    // **Change starts here**
+    // Show alert with the smoothie name after the order is placed
+    if (ingredients.length > 0) {
+        // Ensuring the smoothie name is generated
+        const smoothieName = generateSmoothieName(ingredients);
+        alert(`Your order for a "${smoothieName}" has been placed, and it sounds yummy!`);
+    }
+    // **Change ends here**
 });
 
 // Listen for changes in ingredient selection
