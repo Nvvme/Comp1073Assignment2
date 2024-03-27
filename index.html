@@ -16,64 +16,82 @@
 
                 <label for="base">Choose your base:</label>
                 <select id="base" name="base">
-                    <option value="milk">Milk</option>
-                    <option value="yogurt">Yogurt</option>
-                    <option value="juice">Juice</option>
-                    <option value="water">Water</option>
+                    <option value="milk">Milk 🥛🐮</option>
+                    <option value="yogurt">Yogurt 🍦🥛</option>
+                    <option value="juice">Juice 🧃🍎</option>
+                    <option value="water">Water 💧🥤</option>
+                    <!-- The base is free yay ヾ(•ω•`)o -->
                 </select>
 
                 <div class="ingredients">
                     <p>Select your ingredients:</p>
                     <div>
-                        <input type="checkbox" id="banana" name="ingredient" value="banana">
-                        <label for="banana">Banana</label>
+                        <input type="checkbox" id="blueberries" name="ingredient" value="blueberries" data-price="0.80">
+                        <label for="blueberries">Blueberries ($0.80)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="strawberries" name="ingredient" value="strawberries">
-                        <label for="strawberries">Strawberries</label>
+                        <input type="checkbox" id="spinach" name="ingredient" value="spinach" data-price="0.40">
+                        <label for="spinach">Spinach ($0.40)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="blueberries" name="ingredient" value="blueberries">
-                        <label for="blueberries">Blueberries</label>
+                        <input type="checkbox" id="kale" name="ingredient" value="kale" data-price="0.45">
+                        <label for="kale">Kale ($0.45)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="spinach" name="ingredient" value="spinach">
-                        <label for="spinach">Spinach</label>
+                        <input type="checkbox" id="peanutButter" name="ingredient" value="peanutButter" data-price="0.60">
+                        <label for="peanutButter">Peanut Butter ($0.60)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="kale" name="ingredient" value="kale">
-                        <label for="kale">Kale</label>
+                        <input type="checkbox" id="almonds" name="ingredient" value="almonds" data-price="0.70">
+                        <label for="almonds">Almonds ($0.70)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="peanutButter" name="ingredient" value="peanutButter">
-                        <label for="peanutButter">Peanut Butter</label>
+                        <input type="checkbox" id="chiaSeeds" name="ingredient" value="chiaSeeds" data-price="0.55">
+                        <label for="chiaSeeds">Chia Seeds ($0.55)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="almonds" name="ingredient" value="almonds">
-                        <label for="almonds">Almonds</label>
+                        <input type="checkbox" id="proteinPowder" name="ingredient" value="proteinPowder" data-price="0.90">
+                        <label for="proteinPowder">Protein Powder ($0.90)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="chiaSeeds" name="ingredient" value="chiaSeeds">
-                        <label for="chiaSeeds">Chia Seeds</label>
+                        <input type="checkbox" id="mango" name="ingredient" value="mango" data-price="0.75">
+                        <label for="mango">Mango ($0.75)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="proteinPowder" name="ingredient" value="proteinPowder">
-                        <label for="proteinPowder">Protein Powder</label>
+                        <input type="checkbox" id="pineapple" name="ingredient" value="pineapple" data-price="0.65">
+                        <label for="pineapple">Pineapple ($0.65)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="mango" name="ingredient" value="mango">
-                        <label for="mango">Mango</label>
+                        <input type="checkbox" id="coconut" name="ingredient" value="coconut" data-price="0.50">
+                        <label for="coconut">Coconut ($0.50)</label>
+                    </div> 
+                    <div>
+                        <input type="checkbox" id="avocado" name="ingredient" value="avocado" data-price="0.75">
+                        <label for="avocado">Avocado ($0.75)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="pineapple" name="ingredient" value="pineapple">
-                        <label for="pineapple">Pineapple</label>
+                        <input type="checkbox" id="honey" name="ingredient" value="honey" data-price="0.25">
+                        <label for="honey">Honey ($0.25)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="coconut" name="ingredient" value="coconut">
-                        <label for="coconut">Coconut</label>
+                        <input type="checkbox" id="flaxSeeds" name="ingredient" value="flaxSeeds" data-price="0.35">
+                        <label for="flaxSeeds">Flax Seeds ($0.35)</label>
                     </div>
+                    <div>
+                        <input type="checkbox" id="yogurt" name="ingredient" value="yogurt" data-price="0.40">
+                        <label for="yogurt">Yogurt ($0.40)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="oats" name="ingredient" value="oats" data-price="0.20">
+                        <label for="oats">Oats ($0.20)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="cocoaPowder" name="ingredient" value="cocoaPowder" data-price="0.50">
+                        <label for="cocoaPowder">Cocoa Powder ($0.50)</label>
+                    </div>                   
                     <!-- I think this many options are enough for now-->
-
+                    <!-- I added some prices because I forgot to do that earlier-->
+                </div>
                 <input type="submit" value="Order Smoothie">
                 <input type="button" id="randomize" value="Randomize">
             </fieldset>
@@ -81,6 +99,7 @@
 
         <section id="smoothieResult">
             <h2>Your Smoothie</h2>
+            <div id="totalPrice">Total: $0.00</div>
             <p id="smoothieDescription">Please place an order...</p>
         </section>
     </main>
